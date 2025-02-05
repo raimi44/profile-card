@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile Card</title>
+
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-picture">
+            <img src="/img/profile card.jpg" alt="Profile" data-testid="profilePicture">
+        </div>
+        
+        <h1 data-testid="fullName">Raimi Idris</h1>
+        <h2 data-testid="jobTitle">Software developer</h2>
+        
+        <p data-testid="shortBio">
+            Passionate frontend developer with 1+ years of experience in building scalable web applications.
+            Specialized in HTML and CSS ecosystem. Open source contributor and tech community enthusiast.
+        </p>
+        
+        <div class="contact-info">
+            <p data-testid="currentLocation">📍 Kaduna State, Nigeria</p>
+            <a href="mailto:john.doe@example.com" data-testid="emailAddress">raimiidris@gmail.com</a>
+        </div>
+
+        <div class="social-links" data-testid="socialLinks">
+            <a href="https://linkedin.com/in/johndoe" target="_blank">LinkedIn</a>
+            <a href="https://github.com/johndoe" target="_blank">GitHub</a>
+            <a href="https://twitter.com/johndoe" target="_blank">Twitter</a>
+        </div>
+
+        <div class="time" data-testid="currentTimeUTC"></div>
+    </div>
+
+    <script>
+        function updateUTCTime() {
+            const now = new Date();
+            document.querySelector('[data-testid="currentTimeUTC"]').textContent = now.toUTCString();
+        }
+
+        // Update time on page load
+        updateUTCTime();
+    </script>
+</body>
+</html>
